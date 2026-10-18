@@ -1,0 +1,11 @@
+{
+  "source": "column_outage_experiment.py",
+  "probability_quality_scores": {
+    "brier_score": "mean squared error of positive-class probabilities",
+    "ece_10_equal_width": "10-bin equal-width expected calibration error"
+  },
+  "rows": 36768,
+  "sklearn": "1.9.0",
+  "xgboost": "3.4.1",
+  "pandas": "3.0.5"
+}

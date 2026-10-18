@@ -1,0 +1,6 @@
+{
+  "source_experiment_config": "experiment.json",
+  "outage_fractions": [0.10, 0.25, 0.50],
+  "groups_per_split_fraction": 20,
+  "results_dir": "results/column_outage_v2_calibration"
+}

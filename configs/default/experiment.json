@@ -1,0 +1,16 @@
+{
+  "datasets": [
+    {"name": "credit", "target_column": "class", "positive_label": "bad"},
+    {"name": "heart", "target_column": "HeartDisease", "positive_label": "present"},
+    {"name": "miniboone", "target_column": "signal", "positive_label": true, "drop_duplicates": true},
+    {"name": "electricity", "target_column": "class", "positive_label": "UP", "split_strategy": "chronological", "order_columns": ["date", "day", "period"], "chronological_windows": [
+      {"train_end": 0.40, "calibration_end": 0.60, "test_end": 0.70},
+      {"train_end": 0.50, "calibration_end": 0.70, "test_end": 0.80},
+      {"train_end": 0.60, "calibration_end": 0.80, "test_end": 0.90},
+      {"train_end": 0.70, "calibration_end": 0.90, "test_end": 1.00}
+    ], "bootstrap_block_size": 48}
+  ],
+  "models": ["logistic_regression", "random_forest", "linear_svm", "xgboost"],
+  "split_seeds": [2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035],
+  "n_folds": 5
+}
